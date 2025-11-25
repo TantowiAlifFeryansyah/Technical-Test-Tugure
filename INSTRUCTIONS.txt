@@ -1,0 +1,22 @@
+FINAL Deliverable - Tugure Library (Backend + Frontend)
+
+Backend (Go):
+- Edit backend/.env to set DB credentials.
+- Create PostgreSQL database (name as in .env DB_NAME).
+- Run: go mod tidy
+- Run: go run *.go
+- Server runs default at http://localhost:8080
+
+Frontend (React):
+- cd frontend
+- npm install
+- npm start (will proxy to backend at same origin; for dev, consider using a proxy or run frontend on a different port and set full API URLs)
+
+DB:
+- db/schema.sql contains CREATE TABLE and sample data. Use psql to restore or run in your DB tool.
+- db/backup.sql same as schema (deliverable required).
+
+Notes:
+- Endpoints available under /api as documented in routes.go
+- Overdue anggota list: GET /api/pinjaman/overdue/anggota
+- Pinjam detail by anggota: GET /api/pinjaman/anggota/:id
